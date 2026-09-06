@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admissions - Hari's Computer Training Institute</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .admission-page {
+            padding: 60px 20px;
+            min-height: 80vh;
+            text-align: center;
+        }
+
+        .admission-page h1 {
+            font-size: 42px;
+            color: #173f67;
+            margin-bottom: 10px;
+        }
+
+        .admission-intro {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 35px;
+        }
+
+        .admission-container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 35px;
+            border-radius: 18px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+        }
+
+        .admission-container h2 {
+            color: #173f67;
+            margin-bottom: 25px;
+        }
+
+        .admission-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+            text-align: left;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group.full {
+            grid-column: 1 / 3;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            margin-bottom: 7px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 15px;
+        }
+
+        .submit-button {
+            grid-column: 1 / 3;
+            text-align: center;
+        }
+
+        .submit-button button {
+            background: #173f67;
+            color: white;
+            border: none;
+            padding: 14px 35px;
+            border-radius: 8px;
+            font-size: 17px;
+            cursor: pointer;
+        }
+
+        .submit-button button:hover {
+            background: #0d2d4a;
+        }
+
+        #successMessage {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            background: #d4edda;
+            color: #155724;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 700px) {
+            .admission-form {
+                grid-template-columns: 1fr;
+            }
+
+            .form-group.full,
+            .submit-button {
+                grid-column: 1;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="logo">
+
+            <img src="images/admission.jpg"
+                 alt="Hari's Computer Training Institute Logo">
+
+            <h2>Hari's Computer Training Institute</h2>
+
+        </div>
+
+        <nav>
+
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="courses.html">Courses</a>
+            <a href="faculty.html">Faculty</a>
+
+            <!-- IMPORTANT -->
+            <a href="admission.html">Admissions</a>
+
+            <a href="contact.html">Contact</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= ADMISSION ================= -->
+
+    <section class="admission-page">
+
+        <h1>Admissions</h1>
+
+        <p class="admission-intro">
+            Start your computer learning journey with
+            Hari's Computer Training Institute.
+        </p>
+
+
+        <div class="admission-container">
+
+            <h2>Apply for Admission</h2>
+
+            <form class="admission-form" id="admissionForm">
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your full name"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="phone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        placeholder="Enter your phone number"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="course">
+                        Select Course
+                    </label>
+
+                    <select id="course" required>
+
+                        <option value="">
+                            -- Select Course --
+                        </option>
+
+                        <option>Python Programming</option>
+                        <option>Java Programming</option>
+                        <option>Web Development</option>
+                        <option>C Programming</option>
+                        <option>MS Office</option>
+                        <option>Tally</option>
+                        <option>Data Science</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group full">
+
+                    <label for="message">
+                        Message
+                    </label>
+
+                    <textarea
+                        id="message"
+                        rows="5"
+                        placeholder="Enter your message">
+                    </textarea>
+
+                </div>
+
+
+                <div class="submit-button">
+
+                    <button type="submit">
+                        Submit Application
+                    </button>
+
+                </div>
+
+            </form>
+
+
+            <div id="successMessage">
+                Application submitted successfully!
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <h3>Hari's Computer Training Institute</h3>
+
+        <p>
+            Learn Today | Grow Tomorrow
+        </p>
+
+        <p>
+            © 2026 Hari's Computer Training Institute.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        document
+            .getElementById("admissionForm")
+            .addEventListener("submit", function(event) {
+
+                event.preventDefault();
+
+                document
+                    .getElementById("successMessage")
+                    .style.display = "block";
+
+                this.reset();
+
+            });
+
+    </script>
+
+</body>
+
+</html>

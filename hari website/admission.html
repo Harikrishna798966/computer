@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admissions - Hari's Computer Training Institute</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="logo">
+            <img src="images/logo.jpg"
+                 alt="Reddy's Computer Training Institute Logo">
+
+            <h2>Hari's Computer Training Institute</h2>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="courses.html">Courses</a>
+            <a href="faculty.html">Faculty</a>
+            <a href="admission.html">Admissions</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- ================= ADMISSION SECTION ================= -->
+
+    <section class="admissions">
+
+        <h1>Admissions</h1>
+
+        <p>
+            Start your computer learning journey with
+            Hari's Computer Training Institute.
+        </p>
+
+
+        <!-- Admission Image -->
+
+        <div class="admission-image">
+
+            <img src="images/admissions.jpg"
+                 alt="Admissions">
+
+        </div>
+
+
+        <!-- Admission Process -->
+
+        <div class="admission-info">
+
+            <h2>Admission Process</h2>
+
+            <ol>
+                <li>Select your preferred course.</li>
+                <li>Fill in the admission form.</li>
+                <li>Submit your details.</li>
+                <li>Our institute will contact you.</li>
+                <li>Start your classes.</li>
+            </ol>
+
+        </div>
+
+
+        <!-- ================= FORM ================= -->
+
+        <div class="admission-form">
+
+            <h2>Apply for Admission</h2>
+
+            <form id="admissionForm">
+
+                <label for="name">Full Name</label>
+
+                <input type="text"
+                       id="name"
+                       placeholder="Enter your full name"
+                       required>
+
+
+                <label for="phone">Phone Number</label>
+
+                <input type="tel"
+                       id="phone"
+                       placeholder="Enter your phone number"
+                       required>
+
+
+                <label for="email">Email</label>
+
+                <input type="email"
+                       id="email"
+                       placeholder="Enter your email"
+                       required>
+
+
+                <label for="course">Select Course</label>
+
+                <select id="course" required>
+
+                    <option value="">
+                        -- Select Course --
+                    </option>
+
+                    <option value="Python">
+                        Python Programming
+                    </option>
+
+                    <option value="Java">
+                        Java Programming
+                    </option>
+
+                    <option value="Web Development">
+                        Web Development
+                    </option>
+
+                    <option value="C Programming">
+                        C Programming
+                    </option>
+
+                    <option value="MS Office">
+                        MS Office
+                    </option>
+
+                    <option value="Tally">
+                        Tally
+                    </option>
+
+                </select>
+
+
+                <label for="message">Message</label>
+
+                <textarea id="message"
+                          rows="5"
+                          placeholder="Enter your message">
+                </textarea>
+
+
+                <button type="submit">
+                    Submit Application
+                </button>
+
+            </form>
+
+
+            <!-- Success Message -->
+
+            <div id="successMessage"
+                 style="display:none;">
+
+                ✅ Application submitted successfully!
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <h3>Hari's Computer Training Institute</h3>
+
+        <p>Learn Today | Grow Tomorrow</p>
+
+        <p>
+            © 2026 Hari's Computer Training Institute.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        document
+        .getElementById("admissionForm")
+        .addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            document
+            .getElementById("successMessage")
+            .style.display = "block";
+
+            this.reset();
+
+        });
+
+    </script>
+
+</body>
+
+</html>
